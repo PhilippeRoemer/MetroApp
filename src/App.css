@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #333;
+    color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.trainLinesContainer {
+    display: flex;
+    justify-content: space-evenly;
+    color: #000;
+    width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.trainLine {
+    border-style: solid;
+    border-color: #fff;
+    -webkit-touch-callout: none;
+    align-items: center;
+    background-color: #313131;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    padding: 10px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-top: 5%;
 }
 
-.App-link {
-  color: #61dafb;
+.trainLine:hover {
+    color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rdLine {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blLine {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orLine {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grLine {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svLine {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ylLine {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stationTime {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+}
+
+.stationSelectHide {
+    display: none;
 }
