@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MetroApp/static/css/main.3dba3fec.css",
+    "main.js": "/MetroApp/static/js/main.5ac4aaf6.js",
+    "index.html": "/MetroApp/index.html",
+    "main.3dba3fec.css.map": "/MetroApp/static/css/main.3dba3fec.css.map",
+    "main.5ac4aaf6.js.map": "/MetroApp/static/js/main.5ac4aaf6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3dba3fec.css",
+    "static/js/main.5ac4aaf6.js"
+  ]
+}
