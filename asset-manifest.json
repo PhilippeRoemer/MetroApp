@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/MetroApp/static/css/main.8e45414a.css",
-    "main.js": "/MetroApp/static/js/main.19c6ed2a.js",
+    "main.css": "/MetroApp/static/css/main.60e00266.css",
+    "main.js": "/MetroApp/static/js/main.5f706e51.js",
     "index.html": "/MetroApp/index.html",
-    "main.8e45414a.css.map": "/MetroApp/static/css/main.8e45414a.css.map",
-    "main.19c6ed2a.js.map": "/MetroApp/static/js/main.19c6ed2a.js.map"
+    "main.60e00266.css.map": "/MetroApp/static/css/main.60e00266.css.map",
+    "main.5f706e51.js.map": "/MetroApp/static/js/main.5f706e51.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e45414a.css",
-    "static/js/main.19c6ed2a.js"
+    "static/css/main.60e00266.css",
+    "static/js/main.5f706e51.js"
   ]
 }
