@@ -5,7 +5,7 @@ import "./App.css";
 
 const customStyles = {
     content: {
-        top: "50%",
+        top: "20%",
         left: "50%",
         right: "auto",
         bottom: "auto",
@@ -123,12 +123,12 @@ function App() {
 
     return (
         <div className="App">
-            <Modal isOpen={modalIsOpen} onAfterOpen={afterOpenModal} onRequestClose={closeModal} shouldCloseOnOverlayClick={false} style={customStyles} contentLabel="Example Modal" ariaHideApp={false}>
-                <button onClick={closeModal}>close</button>
+            <Modal isOpen={modalIsOpen} onAfterOpen={afterOpenModal} onRequestClose={closeModal} shouldCloseOnOverlayClick={false} overlayClassName="overlay" style={customStyles} contentLabel="Example Modal" ariaHideApp={false}>
+                <button onClick={closeModal}>Close</button>
                 <h1>{metroStation} Line Metro Stations</h1>
 
                 <div className="stationSelectHide" id="RedStations">
-                    <select onChange={RD_Station} id="RD_Station">
+                    <select onChange={RD_Station} id="RD_Station" className="stationDropdown">
                         <option hidden disabled selected>
                             -- select a station --
                         </option>
@@ -163,7 +163,7 @@ function App() {
                 </div>
 
                 <div className="stationSelectHide" id="BlueStations">
-                    <select onChange={BL_Station} id="BL_Station">
+                    <select onChange={BL_Station} id="BL_Station" className="stationDropdown">
                         <option hidden disabled selected>
                             -- select a station --
                         </option>
@@ -197,7 +197,7 @@ function App() {
                     </select>
                 </div>
                 <div className="stationSelectHide" id="YellowStations">
-                    <select onChange={YL_Station} id="YL_Station">
+                    <select onChange={YL_Station} id="YL_Station" className="stationDropdown">
                         <option hidden disabled selected>
                             -- select a station --
                         </option>
@@ -207,7 +207,7 @@ function App() {
                 </div>
 
                 <div className="stationSelectHide" id="OrangeStations">
-                    <select onChange={OR_Station} id="OR_Station">
+                    <select onChange={OR_Station} id="OR_Station" className="stationDropdown">
                         <option hidden disabled selected>
                             -- select a station --
                         </option>
@@ -228,7 +228,7 @@ function App() {
                 </div>
 
                 <div className="stationSelectHide" id="GreenStations">
-                    <select onChange={GR_Station} id="GR_Station">
+                    <select onChange={GR_Station} id="GR_Station" className="stationDropdown">
                         <option hidden disabled selected>
                             -- select a station --
                         </option>
@@ -257,7 +257,7 @@ function App() {
                 </div>
 
                 <div className="stationSelectHide" id="SilverStations">
-                    <select onChange={SV_Station} id="SV_Station">
+                    <select onChange={SV_Station} id="SV_Station" className="stationDropdown">
                         <option hidden disabled selected>
                             -- select a station --
                         </option>
