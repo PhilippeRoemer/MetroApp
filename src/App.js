@@ -22,6 +22,7 @@ function App() {
     const [mertroInfo, setMetroInfo] = useState([]);
     const [metroUpdate, setMetroUpdate] = useState([]);
     const [selectedStationValue, setSelectedStationValue] = useState("");
+    const [showDiv, setShowDiv] = useState(false);
 
     const api_key = process.env.REACT_APP_API_KEY;
 
@@ -51,6 +52,7 @@ function App() {
     function closeModal() {
         setIsOpen(false);
         setMetroData(false);
+        setShowDiv(false);
     }
 
     useEffect(() => {
@@ -236,18 +238,22 @@ function App() {
                     </select>
                 </div>
 
-                {mertroInfo.map((post) => {
-                    const minutes = post.Min;
-                    const destination = post.DestinationName;
+                {showDiv ? (
+                    <div>
+                        {mertroInfo.map((post) => {
+                            const minutes = post.Min;
+                            const destination = post.DestinationName;
 
-                    return (
-                        <div className="stationTime">
-                            <p>{destination}</p>
-                            <p>{minutes}</p>
-                        </div>
-                    );
-                })}
-                <p>{metroUpdate}</p>
+                            return (
+                                <div className="stationTime">
+                                    <p>{destination}</p>
+                                    <p>{minutes}</p>
+                                </div>
+                            );
+                        })}
+                        <p>{metroUpdate}</p>
+                    </div>
+                ) : null}
             </Modal>
             <div className="trainLinesContainer">
                 <div className="rdLine trainLine" id="Red" onClick={openModal}></div>
