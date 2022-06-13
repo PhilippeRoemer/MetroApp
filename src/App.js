@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import axios from "axios";
 import "./App.css";
@@ -17,8 +17,11 @@ const customStyles = {
 function App() {
     const [metroStation, setMetroStation] = useState("");
     const [selectedLine, setSelectedLine] = useState(false);
-    const [modalIsOpen, setIsOpen] = React.useState(false);
+    const [metroData, setMetroData] = useState(false);
+    const [modalIsOpen, setIsOpen] = useState(false);
     const [mertroInfo, setMetroInfo] = useState([]);
+    const [metroUpdate, setMetroUpdate] = useState([]);
+    const [selectedStationValue, setSelectedStationValue] = useState("");
 
     const api_key = process.env.REACT_APP_API_KEY;
 
@@ -47,13 +50,37 @@ function App() {
 
     function closeModal() {
         setIsOpen(false);
+        setMetroData(false);
     }
+
+    useEffect(() => {
+        if (modalIsOpen === true && metroData === true) {
+            const interval = setInterval(() => {
+                UpdateStationTimes();
+                const updateTime = new Date();
+                setMetroUpdate("Metro data updated at: " + updateTime.toLocaleTimeString("en-US", { hour: "numeric", minute: "numeric", hour12: true }));
+            }, 10000);
+            return () => clearInterval(interval);
+        }
+    }, [metroData]);
 
     const GetStationTimes = (e) => {
         const selectedMetroStation = e.currentTarget.value;
-        console.log(selectedMetroStation);
+        setSelectedStationValue(selectedMetroStation);
+        console.log(selectedStationValue);
+        setMetroData(true);
         axios
             .get("https://api.wmata.com/StationPrediction.svc/json/GetPrediction/" + selectedMetroStation + "?api_key=" + api_key)
+            .then((res) => {
+                console.log(res.data.Trains);
+                setMetroInfo(res.data.Trains);
+            })
+            .catch((error) => console.log(error));
+    };
+
+    const UpdateStationTimes = () => {
+        axios
+            .get("https://api.wmata.com/StationPrediction.svc/json/GetPrediction/" + selectedStationValue + "?api_key=" + api_key)
             .then((res) => {
                 console.log(res.data.Trains);
                 setMetroInfo(res.data.Trains);
@@ -220,6 +247,7 @@ function App() {
                         </div>
                     );
                 })}
+                <p>{metroUpdate}</p>
             </Modal>
             <div className="trainLinesContainer">
                 <div className="rdLine trainLine" id="Red" onClick={openModal}></div>
