@@ -23,7 +23,6 @@ body {
     -webkit-touch-callout: none;
     align-items: center;
     background-color: #313131;
-    border-radius: 50px;
     cursor: pointer;
     display: flex;
     padding: 10px;
@@ -31,6 +30,8 @@ body {
     -ms-user-select: none;
     user-select: none;
     margin-top: 1%;
+    height: 3em;
+    width: 3em;
 }
 
 .trainLine:hover {
@@ -38,8 +39,6 @@ body {
 }
 
 .rdLine {
-    height: 50px;
-    width: 50px;
     border-radius: 50%;
     background-color: red;
     display: flex;
@@ -48,8 +47,6 @@ body {
 }
 
 .blLine {
-    height: 50px;
-    width: 50px;
     border-radius: 50%;
     background-color: blue;
     display: flex;
@@ -58,8 +55,6 @@ body {
 }
 
 .orLine {
-    height: 50px;
-    width: 50px;
     border-radius: 50%;
     background-color: orange;
     display: flex;
@@ -68,8 +63,6 @@ body {
 }
 
 .grLine {
-    height: 50px;
-    width: 50px;
     border-radius: 50%;
     background-color: green;
     display: flex;
@@ -78,8 +71,6 @@ body {
 }
 
 .svLine {
-    height: 50px;
-    width: 50px;
     border-radius: 50%;
     background-color: silver;
     display: flex;
@@ -88,8 +79,6 @@ body {
 }
 
 .ylLine {
-    height: 50px;
-    width: 50px;
     border-radius: 50%;
     background-color: yellow;
     display: flex;
