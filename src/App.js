@@ -18,13 +18,15 @@ function App() {
     const [metroStation, setMetroStation] = useState("");
     const [selectedLine, setSelectedLine] = useState(false);
     const [modalIsOpen, setIsOpen] = React.useState(false);
+    const [mertroInfo, setMetroInfo] = useState([]);
+
     const api_key = process.env.REACT_APP_API_KEY;
 
     function openModal(e) {
         setIsOpen(true);
         setSelectedLine(e.currentTarget.id);
-        const selectedStation = e.currentTarget.id;
-        setMetroStation(selectedStation);
+        const selectedMetroLine = e.currentTarget.id;
+        setMetroStation(selectedMetroLine);
     }
 
     function afterOpenModal() {
@@ -47,73 +49,11 @@ function App() {
         setIsOpen(false);
     }
 
-    const [mertroInfo, setMetroInfo] = useState([]);
-
-    const RD_Station = () => {
-        const stationCode = document.getElementById("RD_Station").value;
-        console.log(stationCode);
+    const GetStationTimes = (e) => {
+        const selectedMetroStation = e.currentTarget.value;
+        console.log(selectedMetroStation);
         axios
-            .get("https://api.wmata.com/StationPrediction.svc/json/GetPrediction/" + stationCode + "?api_key=" + api_key)
-            .then((res) => {
-                console.log(res.data.Trains);
-                setMetroInfo(res.data.Trains);
-            })
-            .catch((error) => console.log(error));
-    };
-
-    const BL_Station = () => {
-        const stationCode = document.getElementById("BL_Station").value;
-        console.log(stationCode);
-        axios
-            .get("https://api.wmata.com/StationPrediction.svc/json/GetPrediction/" + stationCode + "?api_key=" + api_key)
-            .then((res) => {
-                console.log(res.data.Trains);
-                setMetroInfo(res.data.Trains);
-            })
-            .catch((error) => console.log(error));
-    };
-
-    const OR_Station = () => {
-        const stationCode = document.getElementById("OR_Station").value;
-        console.log(stationCode);
-        axios
-            .get("https://api.wmata.com/StationPrediction.svc/json/GetPrediction/" + stationCode + "?api_key=" + api_key)
-            .then((res) => {
-                console.log(res.data.Trains);
-                setMetroInfo(res.data.Trains);
-            })
-            .catch((error) => console.log(error));
-    };
-
-    const GR_Station = () => {
-        const stationCode = document.getElementById("GR_Station").value;
-        console.log(stationCode);
-        axios
-            .get("https://api.wmata.com/StationPrediction.svc/json/GetPrediction/" + stationCode + "?api_key=" + api_key)
-            .then((res) => {
-                console.log(res.data.Trains);
-                setMetroInfo(res.data.Trains);
-            })
-            .catch((error) => console.log(error));
-    };
-
-    const SV_Station = () => {
-        const stationCode = document.getElementById("SV_Station").value;
-        console.log(stationCode);
-        axios
-            .get("https://api.wmata.com/StationPrediction.svc/json/GetPrediction/" + stationCode + "?api_key=" + api_key)
-            .then((res) => {
-                console.log(res.data.Trains);
-                setMetroInfo(res.data.Trains);
-            })
-            .catch((error) => console.log(error));
-    };
-
-    const YL_Station = () => {
-        const stationCode = document.getElementById("YL_Station").value;
-        console.log(stationCode);
-        axios
-            .get("https://api.wmata.com/StationPrediction.svc/json/GetPrediction/" + stationCode + "?api_key=" + api_key)
+            .get("https://api.wmata.com/StationPrediction.svc/json/GetPrediction/" + selectedMetroStation + "?api_key=" + api_key)
             .then((res) => {
                 console.log(res.data.Trains);
                 setMetroInfo(res.data.Trains);
@@ -128,7 +68,7 @@ function App() {
                 <h1>{metroStation} Line Metro Stations</h1>
 
                 <div className="stationSelectHide" id="RedStations">
-                    <select onChange={RD_Station} id="RD_Station" className="stationDropdown">
+                    <select onChange={GetStationTimes} className="stationDropdown">
                         <option hidden disabled selected>
                             -- select a station --
                         </option>
@@ -163,7 +103,7 @@ function App() {
                 </div>
 
                 <div className="stationSelectHide" id="BlueStations">
-                    <select onChange={BL_Station} id="BL_Station" className="stationDropdown">
+                    <select onChange={GetStationTimes} className="stationDropdown">
                         <option hidden disabled selected>
                             -- select a station --
                         </option>
@@ -197,7 +137,7 @@ function App() {
                     </select>
                 </div>
                 <div className="stationSelectHide" id="YellowStations">
-                    <select onChange={YL_Station} id="YL_Station" className="stationDropdown">
+                    <select onChange={GetStationTimes} className="stationDropdown">
                         <option hidden disabled selected>
                             -- select a station --
                         </option>
@@ -207,7 +147,7 @@ function App() {
                 </div>
 
                 <div className="stationSelectHide" id="OrangeStations">
-                    <select onChange={OR_Station} id="OR_Station" className="stationDropdown">
+                    <select onChange={GetStationTimes} className="stationDropdown">
                         <option hidden disabled selected>
                             -- select a station --
                         </option>
@@ -228,7 +168,7 @@ function App() {
                 </div>
 
                 <div className="stationSelectHide" id="GreenStations">
-                    <select onChange={GR_Station} id="GR_Station" className="stationDropdown">
+                    <select onChange={GetStationTimes} className="stationDropdown">
                         <option hidden disabled selected>
                             -- select a station --
                         </option>
@@ -257,7 +197,7 @@ function App() {
                 </div>
 
                 <div className="stationSelectHide" id="SilverStations">
-                    <select onChange={SV_Station} id="SV_Station" className="stationDropdown">
+                    <select onChange={GetStationTimes} className="stationDropdown">
                         <option hidden disabled selected>
                             -- select a station --
                         </option>
