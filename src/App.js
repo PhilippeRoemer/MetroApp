@@ -71,6 +71,7 @@ function App() {
         setSelectedStationValue(selectedMetroStation);
         console.log(selectedStationValue);
         setMetroData(true);
+        setShowDiv(true);
         axios
             .get("https://api.wmata.com/StationPrediction.svc/json/GetPrediction/" + selectedMetroStation + "?api_key=" + api_key)
             .then((res) => {
@@ -92,6 +93,26 @@ function App() {
 
     return (
         <div className="App">
+            <div class="circle-container">
+                <a class="deg270">
+                    <div className="rdLine trainLine" id="Red" onClick={openModal}></div>
+                </a>
+                <a class="deg335">
+                    <div className="blLine trainLine" id="Blue" onClick={openModal}></div>
+                </a>
+                <a class="deg30">
+                    <div className="orLine trainLine" id="Orange" onClick={openModal}></div>
+                </a>
+                <a class="deg90">
+                    <div className="grLine trainLine" id="Green" onClick={openModal}></div>
+                </a>
+                <a class="deg150">
+                    <div className="svLine trainLine" id="Silver" onClick={openModal}></div>
+                </a>
+                <a class="deg205">
+                    <div className="ylLine trainLine" id="Yellow" onClick={openModal}></div>
+                </a>
+            </div>
             <Modal isOpen={modalIsOpen} onAfterOpen={afterOpenModal} onRequestClose={closeModal} shouldCloseOnOverlayClick={false} overlayClassName="overlay" style={customStyles} contentLabel="Example Modal" ariaHideApp={false}>
                 <button onClick={closeModal}>Close</button>
                 <h1>{metroStation} Line Metro Stations</h1>
@@ -255,14 +276,6 @@ function App() {
                     </div>
                 ) : null}
             </Modal>
-            <div className="trainLinesContainer">
-                <div className="rdLine trainLine" id="Red" onClick={openModal}></div>
-                <div className="blLine trainLine" id="Blue" onClick={openModal}></div>
-                <div className="orLine trainLine" id="Orange" onClick={openModal}></div>
-                <div className="grLine trainLine" id="Green" onClick={openModal}></div>
-                <div className="svLine trainLine" id="Silver" onClick={openModal}></div>
-                <div className="ylLine trainLine" id="Yellow" onClick={openModal}></div>
-            </div>
         </div>
     );
 }

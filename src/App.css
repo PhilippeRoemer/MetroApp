@@ -124,3 +124,39 @@ body {
     bottom: 0;
     background-color: #303030db;
 }
+
+.circle-container a {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2.5em;
+}
+
+.deg335 {
+    transform: rotate(335deg) translate(9em) rotate(-335deg);
+}
+
+.deg30 {
+    transform: rotate(30deg) translate(9em) rotate(-30deg);
+}
+
+.deg150 {
+    transform: rotate(150deg) translate(9em) rotate(-150deg);
+}
+
+.deg205 {
+    transform: rotate(205deg) translate(9em) rotate(-205deg);
+}
+
+.deg270 {
+    transform: rotate(270deg) translate(9em) rotate(-270deg);
+}
+
+.deg315 {
+    transform: rotate(315deg) translate(9em) rotate(-315deg);
+}
+
+.deg90 {
+    transform: rotate(90deg) translate(9em) rotate(-90deg);
+}
