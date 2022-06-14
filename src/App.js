@@ -5,7 +5,7 @@ import "./App.css";
 
 const customStyles = {
     content: {
-        top: "20%",
+        top: "50%",
         left: "50%",
         right: "auto",
         bottom: "auto",
