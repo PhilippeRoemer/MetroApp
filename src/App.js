@@ -94,23 +94,23 @@ function App() {
     return (
         <div className="App">
             <div class="circle-container">
-                <a class="deg270">
-                    <div className="rdLine trainLine" id="Red" onClick={openModal}></div>
+                <a className="deg270">
+                    <div className="rdLine trainLine fade1 " id="Red" onClick={openModal}></div>
                 </a>
-                <a class="deg335">
-                    <div className="blLine trainLine" id="Blue" onClick={openModal}></div>
+                <a className="deg335">
+                    <div className="blLine trainLine fade2" id="Blue" onClick={openModal}></div>
                 </a>
-                <a class="deg30">
-                    <div className="orLine trainLine" id="Orange" onClick={openModal}></div>
+                <a className="deg30">
+                    <div className="orLine trainLine fade3" id="Orange" onClick={openModal}></div>
                 </a>
-                <a class="deg90">
-                    <div className="grLine trainLine" id="Green" onClick={openModal}></div>
+                <a className="deg90">
+                    <div className="grLine trainLine fade4" id="Green" onClick={openModal}></div>
                 </a>
-                <a class="deg150">
-                    <div className="svLine trainLine" id="Silver" onClick={openModal}></div>
+                <a className="deg150">
+                    <div className="svLine trainLine fade5" id="Silver" onClick={openModal}></div>
                 </a>
-                <a class="deg205">
-                    <div className="ylLine trainLine" id="Yellow" onClick={openModal}></div>
+                <a className="deg205">
+                    <div className="ylLine trainLine fade6" id="Yellow" onClick={openModal}></div>
                 </a>
             </div>
             <Modal isOpen={modalIsOpen} onAfterOpen={afterOpenModal} onRequestClose={closeModal} shouldCloseOnOverlayClick={false} overlayClassName="overlay" style={customStyles} contentLabel="Example Modal" ariaHideApp={false}>

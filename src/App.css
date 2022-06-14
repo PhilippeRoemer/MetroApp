@@ -32,10 +32,13 @@ body {
     margin-top: 1%;
     height: 3em;
     width: 3em;
+    -webkit-box-shadow: 0px 0px 10px -3px #ffffff;
+    box-shadow: 0px 0px 10px -3px #ffffff;
 }
 
 .trainLine:hover {
-    color: black;
+    -webkit-box-shadow: 0px 0px 10px -1px #ffffff;
+    box-shadow: 0px 0px 10px -1px #ffffff;
 }
 
 .rdLine {
@@ -148,4 +151,40 @@ body {
 
 .deg90 {
     transform: rotate(90deg) translate(9em) rotate(-90deg);
+}
+
+.fade1 {
+    animation: fadeIn 1s ease-in both;
+}
+
+.fade2 {
+    animation: fadeIn 1s ease-in both;
+    animation-delay: 0.1s;
+}
+.fade3 {
+    animation: fadeIn 1s ease-in both;
+    animation-delay: 0.2s;
+}
+.fade4 {
+    animation: fadeIn 1s ease-in both;
+    animation-delay: 0.3s;
+}
+.fade5 {
+    animation: fadeIn 1s ease-in both;
+    animation-delay: 0.4s;
+}
+.fade6 {
+    animation: fadeIn 1s ease-in both;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }
