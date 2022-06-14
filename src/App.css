@@ -6,14 +6,13 @@
 
 body {
     background-color: #303030;
-    color: #333;
+    color: #eee;
 }
 
 .trainLinesContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #000;
     width: 100%;
 }
 
@@ -91,8 +90,9 @@ body {
 
 .stationTime {
     display: flex;
-    width: 200px;
     justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .stationSelectHide {
@@ -100,12 +100,13 @@ body {
 }
 
 .stationDropdown {
-    width: 100%;
+    width: 330px;
     color: #333;
     text-align: center;
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 15px;
 }
 
 .overlay {
@@ -187,4 +188,19 @@ body {
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
+}
+
+.closeButton {
+    padding: 2px 4px;
+    font-weight: bold;
+}
+
+.stationTitle {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.timeUpdate {
+    margin-top: 10px;
+    text-align: center;
 }

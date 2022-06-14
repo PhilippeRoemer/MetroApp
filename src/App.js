@@ -11,6 +11,8 @@ const customStyles = {
         bottom: "auto",
         marginRight: "-50%",
         transform: "translate(-50%, -50%)",
+        padding: "10px",
+        backgroundColor: "#222",
     },
 };
 
@@ -60,7 +62,7 @@ function App() {
             const interval = setInterval(() => {
                 UpdateStationTimes();
                 const updateTime = new Date();
-                setMetroUpdate("Metro data updated at: " + updateTime.toLocaleTimeString("en-US", { hour: "numeric", minute: "numeric", hour12: true }));
+                setMetroUpdate("Metro times updated at: " + updateTime.toLocaleTimeString("en-US", { hour: "numeric", minute: "numeric", hour12: true }));
             }, 10000);
             return () => clearInterval(interval);
         }
@@ -68,6 +70,8 @@ function App() {
 
     const GetStationTimes = (e) => {
         const selectedMetroStation = e.currentTarget.value;
+        const updateTime = new Date();
+        setMetroUpdate("Metro times updated at: " + updateTime.toLocaleTimeString("en-US", { hour: "numeric", minute: "numeric", hour12: true }));
         setSelectedStationValue(selectedMetroStation);
         console.log(selectedStationValue);
         setMetroData(true);
@@ -114,8 +118,10 @@ function App() {
                 </a>
             </div>
             <Modal isOpen={modalIsOpen} onAfterOpen={afterOpenModal} onRequestClose={closeModal} shouldCloseOnOverlayClick={false} overlayClassName="overlay" style={customStyles} contentLabel="Example Modal" ariaHideApp={false}>
-                <button onClick={closeModal}>Close</button>
-                <h1>{metroStation} Line Metro Stations</h1>
+                <button onClick={closeModal} className="closeButton">
+                    X
+                </button>
+                <h2 className="stationTitle">{metroStation} Line Metro Stations</h2>
 
                 <div className="stationSelectHide" id="RedStations">
                     <select onChange={GetStationTimes} className="stationDropdown">
@@ -272,7 +278,7 @@ function App() {
                                 </div>
                             );
                         })}
-                        <p>{metroUpdate}</p>
+                        <p className="timeUpdate">{metroUpdate}</p>
                     </div>
                 ) : null}
             </Modal>
