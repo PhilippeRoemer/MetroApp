@@ -164,18 +164,20 @@ function App() {
                             <option hidden disabled selected>
                                 -- select a station --
                             </option>
-                            <option value="C01">Metro Center</option>
-                            <option value="C02">McPherson Square</option>
-                            <option value="C03">Farragut West</option>
-                            <option value="C04">Foggy Bottom-GWU</option>
-                            <option value="C05">Rosslyn</option>
-                            <option value="C06">Arlington Cemetery</option>
-                            <option value="C07">Pentagon</option>
-                            <option value="C08">Pentagon City</option>
-                            <option value="C09">Crystal City</option>
-                            <option value="C10">Ronald Reagan Washington National Airport</option>
-                            <option value="C12">Braddock Road</option>
+                            <option value="J03">Franconia-Springfield</option>
+                            <option value="J02">Van Dorn Street</option>
                             <option value="C13">King St-Old Town</option>
+                            <option value="C12">Braddock Road</option>
+                            <option value="C10">Ronald Reagan Washington National Airport</option>
+                            <option value="C09">Crystal City</option>
+                            <option value="C08">Pentagon City</option>
+                            <option value="C07">Pentagon</option>
+                            <option value="C06">Arlington Cemetery</option>
+                            <option value="C05">Rosslyn</option>
+                            <option value="C04">Foggy Bottom-GWU</option>
+                            <option value="C03">Farragut West</option>
+                            <option value="C02">McPherson Square</option>
+                            <option value="C01">Metro Center</option>
                             <option value="D01">Federal Triangle</option>
                             <option value="D02">Smithsonian</option>
                             <option value="D03">L'Enfant Plaza</option>
@@ -189,8 +191,6 @@ function App() {
                             <option value="G03">Addison Road-Seat Pleasant</option>
                             <option value="G04">Morgan Boulevard</option>
                             <option value="G05">Largo Town Center</option>
-                            <option value="J02">Van Dorn Street</option>
-                            <option value="J03">Franconia-Springfield</option>
                         </select>
                     </div>
                     <div className="stationSelectHide" id="YellowStations">
