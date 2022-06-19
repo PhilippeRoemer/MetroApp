@@ -198,8 +198,23 @@ function App() {
                             <option hidden disabled selected>
                                 -- select a station --
                             </option>
-                            <option value="C14">Eisenhower Avenue</option>
                             <option value="C15">Huntington</option>
+                            <option value="C14">Eisenhower Avenue</option>
+                            <option value="C13">King St-Old Town</option>
+                            <option value="C12">Braddock Road</option>
+                            <option value="C10">Ronald Reagan Washington National Airport</option>
+                            <option value="C09">Crystal City</option>
+                            <option value="C08">Pentagon City</option>
+                            <option value="C07">Pentagon</option>
+                            <option value="D03">L'Enfant Plaza</option>
+                            <option value="F02">Archives-Navy Memorial-Penn Quarter</option>
+                            <option value="F01">Gallery Pl-Chinatown</option>
+                            <option value="E01">Mt Vernon Sq 7th St-Convention Center</option>
+                            <option value="E02">Shaw-Howard U</option>
+                            <option value="E03">U Street/African-Amer Civil War Memorial/Cardozo</option>
+                            <option value="E04">Columbia Heights</option>
+                            <option value="E05">Georgia Ave-Petworth</option>
+                            <option value="E06">Fort Totten</option>
                         </select>
                     </div>
 
