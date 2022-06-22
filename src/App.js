@@ -257,6 +257,17 @@ function App() {
                             <option hidden disabled selected>
                                 -- select a station --
                             </option>
+                            <option value="F11">Branch Ave</option>
+                            <option value="F10">Suitland</option>
+                            <option value="F09">Naylor Road</option>
+                            <option value="F08">Southern Avenue</option>
+                            <option value="F07">Congress Heights</option>
+                            <option value="F06">Anacostia</option>
+                            <option value="F05">Navy Yard-Ballpark</option>
+                            <option value="F04">Waterfront</option>
+                            <option value="F03">L'Enfant Plaza</option>
+                            <option value="F02">Archives-Navy Memorial-Penn Quarter</option>
+                            <option value="F01">Gallery Pl-Chinatown</option>
                             <option value="E01">Mt Vernon Sq 7th St-Convention Center</option>
                             <option value="E02">Shaw-Howard U</option>
                             <option value="E03">U Street/African-Amer Civil War Memorial/Cardozo</option>
@@ -267,17 +278,6 @@ function App() {
                             <option value="E08">Prince George's Plaza</option>
                             <option value="E09">College Park-U of Md</option>
                             <option value="E10">Greenbelt</option>
-                            <option value="F01">Gallery Pl-Chinatown</option>
-                            <option value="F02">Archives-Navy Memorial-Penn Quarter</option>
-                            <option value="F03">L'Enfant Plaza</option>
-                            <option value="F04">Waterfront</option>
-                            <option value="F05">Navy Yard-Ballpark</option>
-                            <option value="F06">Anacostia</option>
-                            <option value="F07">Congress Heights</option>
-                            <option value="F08">Southern Avenue</option>
-                            <option value="F09">Naylor Road</option>
-                            <option value="F10">Suitland</option>
-                            <option value="F11">Branch Ave</option>
                         </select>
                     </div>
 
