@@ -286,11 +286,34 @@ function App() {
                             <option hidden disabled selected>
                                 -- select a station --
                             </option>
-                            <option value="N01">McLean</option>
-                            <option value="N02">Tysons Corner</option>
-                            <option value="N03">Greensboro</option>
-                            <option value="N04">Spring Hill</option>
                             <option value="N06">Wiehle-Reston East</option>
+                            <option value="N04">Spring Hill</option>
+                            <option value="N03">Greensboro</option>
+                            <option value="N02">Tysons Corner</option>
+                            <option value="N01">McLean</option>
+                            <option value="K05">East Falls Church</option>
+                            <option value="K04">Ballston-MU</option>
+                            <option value="K03">Virginia Square-GMU</option>
+                            <option value="K02">Clarendon</option>
+                            <option value="K01">Court House</option>
+                            <option value="C05">Rosslyn</option>
+                            <option value="C04">Foggy Bottom-GWU</option>
+                            <option value="C03">Farragut West</option>
+                            <option value="C02">McPherson Square</option>
+                            <option value="C01">Metro Center</option>
+                            <option value="D01">Federal Triangle</option>
+                            <option value="D02">Smithsonian</option>
+                            <option value="D03">L'Enfant Plaza</option>
+                            <option value="D04">Federal Center SW</option>
+                            <option value="D05">Capitol South</option>
+                            <option value="D06">Eastern Market</option>
+                            <option value="D07">Potomac Ave</option>
+                            <option value="D08">Stadium-Armory</option>
+                            <option value="G01">Benning Road</option>
+                            <option value="G02">Capitol Heights</option>
+                            <option value="G03">Addison Road-Seat Pleasant</option>
+                            <option value="G04">Morgan Boulevard</option>
+                            <option value="G05">Largo Town Center</option>
                         </select>
                     </div>
 
