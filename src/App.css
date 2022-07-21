@@ -93,6 +93,7 @@ body {
     justify-content: space-between;
     margin-left: 50px;
     margin-right: 50px;
+    margin-bottom: 10px;
 }
 
 .stationSelectHide {
@@ -213,4 +214,52 @@ body {
 .container {
     background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(90, 92, 106, 1) 0%, rgba(32, 45, 58, 1) 81.3%);
     height: 100vh;
+}
+
+.RD {
+    background-color: red;
+    border-radius: 50%;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.BL {
+    background-color: blue;
+    border-radius: 50%;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.OR {
+    background-color: orange;
+    border-radius: 50%;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.GR {
+    background-color: green;
+    border-radius: 50%;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.SV {
+    background-color: silver;
+    border-radius: 50%;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.YL {
+    background-color: yellow;
+    border-radius: 50%;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
 }

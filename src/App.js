@@ -13,6 +13,8 @@ const customStyles = {
         transform: "translate(-50%, -50%)",
         padding: "10px",
         backgroundColor: "#222",
+        borderStyle: "solid",
+        borderWidth: "4px",
     },
 };
 
@@ -143,14 +145,14 @@ function App() {
                             <option value="A04">Woodley Park-Zoo/Adams Morgan</option>
                             <option value="A03">Dupont Circle</option>
                             <option value="A02">Farragut North</option>
-                            <option value="A01">Metro Center</option>
-                            <option value="B01">Gallery Pl-Chinatown</option>
+                            <option value="A01,C01">Metro Center</option>
+                            <option value="B01,F01">Gallery Pl-Chinatown</option>
                             <option value="B02">Judiciary Square</option>
                             <option value="B03">Union Station</option>
                             <option value="B35">NoMa-Gallaudet U</option>
                             <option value="B04">Rhode Island Ave-Brentwood</option>
                             <option value="B05">Brookland-CUA</option>
-                            <option value="B06">Fort Totten</option>
+                            <option value="B06,E06">Fort Totten</option>
                             <option value="B07">Takoma</option>
                             <option value="B08">Silver Spring</option>
                             <option value="B09">Forest Glen</option>
@@ -177,10 +179,10 @@ function App() {
                             <option value="C04">Foggy Bottom-GWU</option>
                             <option value="C03">Farragut West</option>
                             <option value="C02">McPherson Square</option>
-                            <option value="C01">Metro Center</option>
+                            <option value="C01,A01">Metro Center</option>
                             <option value="D01">Federal Triangle</option>
                             <option value="D02">Smithsonian</option>
-                            <option value="D03">L'Enfant Plaza</option>
+                            <option value="D03,F03">L'Enfant Plaza</option>
                             <option value="D04">Federal Center SW</option>
                             <option value="D05">Capitol South</option>
                             <option value="D06">Eastern Market</option>
@@ -206,15 +208,15 @@ function App() {
                             <option value="C09">Crystal City</option>
                             <option value="C08">Pentagon City</option>
                             <option value="C07">Pentagon</option>
-                            <option value="D03">L'Enfant Plaza</option>
+                            <option value="D03,F03">L'Enfant Plaza</option>
                             <option value="F02">Archives-Navy Memorial-Penn Quarter</option>
-                            <option value="F01">Gallery Pl-Chinatown</option>
+                            <option value="B01,F01">Gallery Pl-Chinatown</option>
                             <option value="E01">Mt Vernon Sq 7th St-Convention Center</option>
                             <option value="E02">Shaw-Howard U</option>
                             <option value="E03">U Street/African-Amer Civil War Memorial/Cardozo</option>
                             <option value="E04">Columbia Heights</option>
                             <option value="E05">Georgia Ave-Petworth</option>
-                            <option value="E06">Fort Totten</option>
+                            <option value="B06,E06">Fort Totten</option>
                         </select>
                     </div>
 
@@ -235,10 +237,10 @@ function App() {
                             <option value="C04">Foggy Bottom-GWU</option>
                             <option value="C03">Farragut West</option>
                             <option value="C02">McPherson Square</option>
-                            <option value="C01">Metro Center</option>
+                            <option value="C01,A01">Metro Center</option>
                             <option value="D01">Federal Triangle</option>
                             <option value="D02">Smithsonian</option>
-                            <option value="D03">L'Enfant Plaza</option>
+                            <option value="D03,F03">L'Enfant Plaza</option>
                             <option value="D04">Federal Center SW</option>
                             <option value="D05">Capitol South</option>
                             <option value="D06">Eastern Market</option>
@@ -265,15 +267,15 @@ function App() {
                             <option value="F06">Anacostia</option>
                             <option value="F05">Navy Yard-Ballpark</option>
                             <option value="F04">Waterfront</option>
-                            <option value="F03">L'Enfant Plaza</option>
+                            <option value="D03,F03">L'Enfant Plaza</option>
                             <option value="F02">Archives-Navy Memorial-Penn Quarter</option>
-                            <option value="F01">Gallery Pl-Chinatown</option>
+                            <option value="B01,F01">Gallery Pl-Chinatown</option>
                             <option value="E01">Mt Vernon Sq 7th St-Convention Center</option>
                             <option value="E02">Shaw-Howard U</option>
                             <option value="E03">U Street/African-Amer Civil War Memorial/Cardozo</option>
                             <option value="E04">Columbia Heights</option>
                             <option value="E05">Georgia Ave-Petworth</option>
-                            <option value="E06">Fort Totten</option>
+                            <option value="B06,E06">Fort Totten</option>
                             <option value="E07">West Hyattsville</option>
                             <option value="E08">Prince George's Plaza</option>
                             <option value="E09">College Park-U of Md</option>
@@ -300,10 +302,10 @@ function App() {
                             <option value="C04">Foggy Bottom-GWU</option>
                             <option value="C03">Farragut West</option>
                             <option value="C02">McPherson Square</option>
-                            <option value="C01">Metro Center</option>
+                            <option value="A01,C01">Metro Center</option>
                             <option value="D01">Federal Triangle</option>
                             <option value="D02">Smithsonian</option>
-                            <option value="D03">L'Enfant Plaza</option>
+                            <option value="D03,F03">L'Enfant Plaza</option>
                             <option value="D04">Federal Center SW</option>
                             <option value="D05">Capitol South</option>
                             <option value="D06">Eastern Market</option>
