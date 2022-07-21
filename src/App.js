@@ -324,9 +324,11 @@ function App() {
                             {mertroInfo.map((post) => {
                                 const minutes = post.Min;
                                 const destination = post.DestinationName;
+                                const metroLine = post.Line;
 
                                 return (
                                     <div className="stationTime">
+                                        <div className={metroLine}></div>
                                         <p>{destination}</p>
                                         <p>{minutes}</p>
                                     </div>
