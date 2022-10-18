@@ -19,6 +19,7 @@ body {
 .trainLine {
     border-style: solid;
     border-color: #fff;
+    border-width: 2px;
     -webkit-touch-callout: none;
     align-items: center;
     background-color: #313131;
