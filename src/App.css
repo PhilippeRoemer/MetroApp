@@ -92,8 +92,8 @@ body {
 .stationTime {
     display: flex;
     justify-content: space-between;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 10px;
 }
 
@@ -263,4 +263,33 @@ body {
     padding: 10px;
     border-style: solid;
     border-width: 1px;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.metroDestination {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 140px;
+    text-align: center;
+}
+
+.stationHeaders {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.destinationHeader {
+    width: 200px;
+    text-align: center;
+}
+
+.carsHeader {
+    padding-left: 10px;
 }

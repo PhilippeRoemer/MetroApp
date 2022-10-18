@@ -9,12 +9,12 @@ const customStyles = {
         left: "50%",
         right: "auto",
         bottom: "auto",
-        marginRight: "-50%",
         transform: "translate(-50%, -50%)",
         padding: "10px",
         backgroundColor: "#222",
         borderStyle: "solid",
         borderWidth: "4px",
+        maxWidth: "360px",
     },
 };
 
@@ -307,19 +307,32 @@ function App() {
 
                     {showDiv ? (
                         <div>
-                            {mertroInfo.map((post) => {
-                                const minutes = post.Min;
-                                const destination = post.DestinationName;
-                                const metroLine = post.Line;
-
-                                return (
-                                    <div className="stationTime">
-                                        <div className={metroLine}></div>
-                                        <p>{destination}</p>
-                                        <p>{minutes}</p>
-                                    </div>
-                                );
-                            })}
+                            {mertroInfo.length !== 0 ? (
+                                <div className="stationHeaders">
+                                    <p>Line</p>
+                                    <p className="destinationHeader">Destination</p>
+                                    <p>Min.</p>
+                                    <p className="carsHeader">Cars</p>
+                                </div>
+                            ) : null}
+                            {mertroInfo.length === 0 ? (
+                                <p className="textCenter">WMATA Reporting No Data</p>
+                            ) : (
+                                mertroInfo.map((post) => {
+                                    const minutes = post.Min;
+                                    const destination = post.DestinationName;
+                                    const metroLine = post.Line;
+                                    const cars = post.Car;
+                                    return (
+                                        <div className="stationTime">
+                                            <div className={metroLine}></div>
+                                            <p className="metroDestination">{destination}</p>
+                                            <p>{minutes}</p>
+                                            <p>{cars}</p>
+                                        </div>
+                                    );
+                                })
+                            )}
                             <p className="timeUpdate">{metroUpdate}</p>
                         </div>
                     ) : null}
