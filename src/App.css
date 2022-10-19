@@ -300,7 +300,43 @@ body {
     justify-content: space-between;
 }
 
+.modalTopRight {
+    display: flex;
+}
+
 .mapThumbnail {
     border-radius: 50%;
     width: 30px;
+}
+
+.alertIcon {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.alertIcon:hover {
+    cursor: pointer;
+}
+
+.alertContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.alertContainer li {
+    padding-bottom: 10px;
+}
+
+.alertBackButton {
+    text-align: center;
+    padding: 5px;
+    background-color: #e9e9ed;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #303030;
+}
+
+.alertBackButton:hover {
+    cursor: pointer;
+    background-color: #d0d0d7;
 }
