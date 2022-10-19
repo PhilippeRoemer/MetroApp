@@ -293,3 +293,14 @@ body {
 .carsHeader {
     padding-left: 10px;
 }
+
+.modalTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mapThumbnail {
+    border-radius: 50%;
+    width: 30px;
+}

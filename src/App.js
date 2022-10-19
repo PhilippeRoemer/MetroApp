@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import axios from "axios";
 import "./App.css";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+import MetroMap from "../src/Images/MetroMap.png";
 
 const customStyles = {
     content: {
@@ -107,9 +110,15 @@ function App() {
                     </a>
                 </div>
                 <Modal isOpen={modalIsOpen} onAfterOpen={afterOpenModal} onRequestClose={closeModal} shouldCloseOnOverlayClick={false} overlayClassName="overlay" style={customStyles} contentLabel="Example Modal" ariaHideApp={false}>
-                    <button onClick={closeModal} className="closeButton">
-                        X
-                    </button>
+                    <div className="modalTop">
+                        <button onClick={closeModal} className="closeButton">
+                            X
+                        </button>
+
+                        <Zoom>
+                            <img src={MetroMap} className="mapThumbnail" />
+                        </Zoom>
+                    </div>
                     <h2 className="stationTitle">{selectedLine} Line Metro Stations</h2>
 
                     <div className="stationSelectHide" id="RedStations">
