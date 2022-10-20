@@ -302,15 +302,21 @@ body {
 
 .modalTopRight {
     display: flex;
+    align-items: center;
 }
 
 .mapThumbnail {
     border-radius: 50%;
-    width: 30px;
+    width: 28px;
+    height: 28px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
 }
 
 .alertIcon {
-    width: 30px;
+    width: 28px;
+    height: 30px;
     margin-right: 10px;
 }
 
